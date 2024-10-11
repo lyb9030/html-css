@@ -1,0 +1,77 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body,
+h1 {
+  margin: 50px;
+}
+
+h2 {
+  border: 1px solid currentColor;
+  width: 300px;
+  inline-size: 300px;
+  height: 100px;
+  block-size: 100px;
+  text-align: center;
+  align-content: center;
+
+  /* line-height 와 height를 같이 입력하면 화면 중간에 정렬로 보임 */
+  /* line-height: 100px;*/
+
+  /* 가운데 정렬 함수 */
+  /* display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center; */
+}
+
+.flex-basic {
+  background: yellow;
+  inline-size: 1000px;
+  block-size: 600px;
+  margin-block: 20px;
+  box-shadow: 1px 1px 0 0 currentColor, -1px -1px 0 0 currentColor;
+  display: flex;
+  flex-flow: row nowrap;
+  /* 좌 우 정렬 */
+  justify-content: center;
+  /* 높이 정렬 */
+  align-items: start;
+  align-content: start;
+  /* 아이템과 아이템의 사이 여백을 설정 */
+  /* gap: 20px; */
+}
+
+.flex-item {
+  background-color: pink;
+  /* inline-size: 500px; */
+  block-size: 200px;
+  flex-basis: 0;
+}
+
+.flex-item:nth-child(odd) {
+  order: 1;
+}
+
+.flex-item1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: lightgreen;
+}
+
+.flex-item2 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: aqua;
+}
+
+.flex-item3 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-color: sandybrown;
+}
+
+.flex-item4 {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
