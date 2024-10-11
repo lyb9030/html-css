@@ -46,7 +46,7 @@ h2 {
   background-color: pink;
   /* inline-size: 500px; */
   block-size: 200px;
-  flex-basis: 0;
+  flex-basis: auto;
 }
 
 .flex-item:nth-child(odd) {
