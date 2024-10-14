@@ -10,12 +10,19 @@
   --white: #fff;
   --gray: #999;
   --green: #03cf5d;
+  --silver: #dadada;
 
   /* 아이콘 크기 (박스) */
   --size-sm: 0.75rem;
   --size-base: 1rem;
   --size-md: 1.25rem;
   --size-lg: 1.5rem;
+
+  /* 글짜 크기 */
+  --text-sm : 0.50rem
+  --text-base : 0.75rem
+  --text-md : 1rem
+  --text-lg : 1.25px
 }
 
 /* 기본 박스 사이징 */
@@ -99,10 +106,35 @@
 
 /* 입력 서식 커머런트 (input) 숨김 레이블 유형*/
 .input {
-  background-color: yellow;
-}
+  --border-color: var(--silver, #dadada);
+  --text-color: var(--dark-gray, #333);
+  --text-size: var(--text-base, ) 0.75rem;
 
-.input__input {
-  border: 1px solid red;
-  inline-size: 100%;
+font-size: var(--text-size, 0.75rem);  
+  color: var(--text-color);
+
+  .input__input {
+    border: 1px solid var(--border-color);
+    inline-size: 100%;
+    block-size: 3rem;
+    padding: 0.875rem;
+
+    &:user-invalid + .input__error-massge span{
+      visibility: visible;
+    }
+  }
+
+
+  .input__error-massge{
+    color: #ff1414;
+    font-size: 0.75rem;
+    margin: 0.5rem 0 0 0;
+
+    
+    span{
+      /* 영역은 남고 컨텐츠는 안보임 / dsiplay: none는 영역도 없어짐 */
+      visibility: hidden;
+    }
+  
+  }
 }
