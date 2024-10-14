@@ -1,0 +1,71 @@
+@import "./../../common/base.css";
+@import "./../../common/a11y.css";
+
+/* 임시 스타일 */
+:root {
+  /* margin -> 위, 아래, 좌, 우 공백 추가 */
+  margin: 50px;
+  --dark-gray: #333;
+  --white: #fff;
+  --gray: #999;
+  --green: #03cf5d;
+}
+
+/* 로고 컴퍼런트 */
+.brand {
+  margin: 0;
+  font-size: 1rem;
+
+  a,
+  svg {
+    /* display:block -> 내부의 요소를 사이즈에 맞춰 줌 */
+    display: block;
+  }
+}
+
+/* 링크 컴퍼런트 */
+.anchor--blank {
+  /* anchor-color: var(--dark-gray, #333 -> 전역에 등록된 dark gray 따라간다, 없으면 #333의 컬러를 사용한다. */
+  --anchor-color: var(--dark-gray, #333);
+
+  /* text-decoration : none -> 텍스트 밑줄 및 색상을 없애줌 */
+  text-decoration: none;
+  /* color : currentcolor -> 색상을 부모속성을 따라 감 */
+  color: currentColor;
+}
+
+/* 체크박스 컴퍼런드  */
+.checkbox {
+  background-color: yellow;
+
+  .checkbox__label {
+    background-color: pink;
+    /* checkbox_lable의 화면을 하나로 합쳐줌 */
+    display: flex;
+    /* align-items:center -> 안에 있는 박스들을 중앙으로 정렬 */
+    align-items: center;
+    /* 아이템들의 상태를 떨어트려 줌 */
+    gap: 0.25em;
+  }
+
+  .checkbox--area {
+    fill: var(--white, #fff);
+  }
+
+  .checkbox--border {
+    fill: var(--gray, #999);
+  }
+
+  .checkbox--mark {
+    fill: var(--gray, #999);
+  }
+
+  .checkbox__input:checked + .checkbox__label + .checkbox__area,
+  .checkbox__input:checked + .checkbox__label + .checkbox__border {
+    fill: var(--green, #03cf5d);
+  }
+
+  .checkbox_input:checked + .checkbox__label + .checkbox--makr {
+    fill: var(--white, #fff);
+  }
+}
