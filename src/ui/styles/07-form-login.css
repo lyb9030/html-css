@@ -55,7 +55,7 @@
   color: currentColor;
 }
 
-/* 체크박스 컴퍼런드  */
+/* 체크박스 컴퍼런트  */
 .checkbox {
   position: relative;
 
@@ -137,4 +137,38 @@ font-size: var(--text-size, 0.75rem);
     }
   
   }
+}
+
+/* 스위치 컴퍼런트 (checkbox) */
+
+.switch{
+position: relative;
+
+.switch__input{
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  margin: 0;
+  inline-size: 2em;
+  block-size: 1rem;
+  appearance: none;
+}
+
+  .switch__label{
+font-size:0.875rem;
+font-weight: 700;
+display: block;
+inline-size: 2em;
+text-align: end;
+  
+    &::after{
+      content: 'OFF';
+    }
+  }
+
+  .switch__input:checked + .switch__label::after{
+    content: 'ON';
+    color: #03cf5d;
+  }
+
 }
