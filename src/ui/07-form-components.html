@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="ko-kr">
+<html lang="ko-KR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>로그인 : Techit</title>
+    <title>폼 컴포넌트 | Techit</title>
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
     <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
-    <link rel="preload" as="style" crossorigin href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
     <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
 
-    <link rel="stylesheet" href="./styles/07-form-login.css" />
+    <link rel="stylesheet" href="./styles/07-form-components.css" />
   </head>
   <body>
-    <!-- 1. 로고 컴퍼런트 (NAVER) -->
+    <!-- 로고 컴포넌트 -->
     <h1 class="brand">
-      <a href="htttps://www.naver.com" class="logo">
+      <a href="https://www.naver.com" class="logo">
         <svg role="img" aria-label="네이버" width="230" height="44" viewBox="0 0 230 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M30.0764 23.5394L13.6301 0H0V43.9824H14.279V20.443L30.7252 43.9824H44.3554V0H30.0764V23.5394Z" fill="#03CF5D" />
           <path d="M66.2086 0L48.8973 43.9824H63.6132L65.701 38.1767H82.2929L84.3851 44H99.0967L81.7853 0.0175967L66.2086 0ZM69.0644 27.5946L73.9992 13.8545L78.9295 27.5946H69.0644Z" fill="#03CF5D" />
@@ -27,10 +28,10 @@
       </a>
     </h1>
 
-    <!-- 2. 링크 컴퍼런트 (IP 보안) - target="_blank" -->
+    <!-- 링크 컴포넌트 (target="_blank") -->
     <a href="/" class="anchor--blank" target="_blank" rel="noopener noreferrer">IP 보안</a>
 
-    <!-- 3. 로그인 상태 유지 (checkbox)-->
+    <!-- 체크박스 컴포넌트 (checkbox) -->
     <div class="checkbox">
       <input class="checkbox__input" type="checkbox" name="checkbox-1" id="checkbox-1" required />
       <label class="checkbox__label" for="checkbox-1">
@@ -51,21 +52,33 @@
       </label>
     </div>
 
-    <!-- 4. 입력 석식 컴퍼런트 (input) : 숨김 레이블 유형-->
+    <!-- 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 -->
     <div class="input" role="group">
       <label class="input__label sr-only" for="input-1">레이블</label>
-      <input class="input__input" type="email" id="input-1" required placeholder="플레이스 홀더 텍스트" aria-errormessage="error-massge-1" />
-      <p class="input__error-massge" role="alert" id="error-massge-1" aria-live="polite">
-        <span>에러 메세지를 입력해 주세요.</span>
+      <input class="input__input" type="email" id="input-1" required placeholder="플레이스 홀더 텍스트" aria-errormessage="error-message-1" />
+      <p class="input__error-message" role="alert" id="error-message-1" aria-live="polite">
+        <span>에러 메시지를 입력해 주세요.</span>
       </p>
     </div>
 
-    <!-- 5. 스위치 컴퍼런트 (checkbox) -->
+    <!-- 스위치 컴포넌트 (checkbox) -->
     <div class="switch" role="group">
       <input class="switch__input" type="checkbox" name="switch-1" id="switch-1" />
       <label class="switch__label" for="switch-1">
-        <span class="sr-only"> IP 보안 스위치</span>
+        <span class="sr-only">IP 보안 스위치</span>
       </label>
     </div>
+
+    <div class="ui-switch">
+      <div class="ui-switch-bubble"></div>
+    </div>
+
+    <div class="custom-switch">
+      <input type="checkbox" name="switch" id="switch" />
+      <label for="switch"><span class="sr-only">IP 보안</span></label>
+    </div>
+
+    <!-- 버튼 컴포넌트 -->
+    <button type="button" class="button--primary">버튼</button>
   </body>
 </html>
