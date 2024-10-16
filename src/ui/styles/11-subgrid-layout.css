@@ -1,0 +1,56 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+body {
+  inline-size: 960px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px) 1fr);
+  grid-template-rows: repeat(5, 50px);
+}
+
+.header {
+  background-color: yellow;
+  grid-row: 1 / span 12;
+  grid-column: 1 / span 12;
+}
+
+.navigation {
+  background-color: pink;
+}
+
+.main {
+  display: grid;
+  background-color: aqua;
+
+  .book {
+    background-color: lightgreen;
+    grid-row: 3 / span 5;
+    grid-column: 1 / span 3;
+    gap: 24px;
+  }
+
+  .news {
+    background-color: lightgray;
+    grid-row: 4 / span 5;
+    grid-column: 4 / span 12;
+    gap: 24px;
+  }
+
+  .board {
+    background-color: chocolate;
+  }
+
+  .favorite {
+    background-color: lightsalmon;
+  }
+
+  .twitter {
+    background-color: lightskyblue;
+  }
+}
+
+.footer {
+  background-color: lightblue;
+  grid-row: 1 / span 12;
+  grid-column: 1 / span 12;
+}
