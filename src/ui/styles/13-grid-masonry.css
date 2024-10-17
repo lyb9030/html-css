@@ -1,0 +1,41 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+.masonry-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+
+  .span-2 {
+  }
+}
+
+.card {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  position: relative;
+
+  img {
+    aspect-ratio: 1 / 0.67;
+    object-fit: cover;
+    filter: sepia();
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  figcaption {
+    background: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    color: var(--white);
+    position: absolute;
+    inset-inline: 1rem;
+    inset-block-end: 1rem;
+    /* 브라우저가 작아질때 글짜 크기를 줄이는 것을 방지 */
+    white-space: nowrap;
+    /* figcaption 부분에 마우스를 올려도 이미지에 올린것과 같은 현상 */
+    pointer-events: none;
+  }
+}
