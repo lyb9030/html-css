@@ -1,0 +1,9 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+/* Tab UI */
+.tab-container {
+  margin-block: 1rem;
+  background-color: yellow;
+  inline-size: 300px;
+}
